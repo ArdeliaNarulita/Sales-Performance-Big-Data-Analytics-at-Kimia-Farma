@@ -98,10 +98,8 @@ FROM penjualan s
 	LEFT JOIN barang b ON b.kode_barang = s.id_barang
 ORDER BY s.tanggal
 );
-
 ALTER TABLE base_table ADD PRIMARY KEY(id_invoice);  
-
-  
+``` 
 <br>
 </details>
 <br>
