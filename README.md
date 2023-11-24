@@ -101,7 +101,7 @@ FROM penjualan s
 ORDER BY s.tanggal
 );
 ALTER TABLE base_table ADD PRIMARY KEY(id_invoice);  
-  
+```  
 <br>
 </details>
 <br>
