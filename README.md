@@ -14,8 +14,7 @@ The source is from Rakamin, there is Kimia Farma data which provides a CSV file 
 
 ### **Objective**
 - Create data mart designs in the form of base tables and aggregate tables
-- Create a sales report dashboard
-<br>
+- Create a sales report dashboard <br>
 
 ### **Dataset** <br>
 The dataset provided consists of the following tables:
@@ -65,7 +64,6 @@ The dataset provided consists of the following tables:
 <br>
 
 ---
-
 ## 📂 **Design Datamart**
 ### **Base Table**
 The base table is a table that contains raw data collected from various sources. The base table in this project is a combination of several columns from the three tables above with the primary key, namely`invoice_id`. <br>
@@ -111,7 +109,6 @@ ALTER TABLE base_table ADD PRIMARY KEY(id_invoice);
     Figure 1 — Sample of The Output Base Table 
 </p>
 <br>
-
 ### Tabel Aggregat
 After creating the base table, I created an aggregate table that SUM the `price` and `product_sold` columns. Then create a new column to find the `total_revenue` value. An aggregate table is a table created to collect and calculate data from a base table. This table contains more concise data so that the process of analyzing and visualizing data is faster and easier.
 <details>
