@@ -1,4 +1,3 @@
-
 # **Project Based Internship : Big Data Analytics – Kimia Farma**
 
 Tool : MySQL - [Look at the script]( https://github.com/ArdeliaNarulita/Sales-Performance-Big-Data-Analytics-at-Kimia-Farma/blob/main/KimiaFarma_Project.sql) <br>
@@ -16,12 +15,13 @@ The source is from Rakamin, there is Kimia Farma data which provides a CSV file 
 - Create data mart designs in the form of base tables and aggregate tables
 - Create a sales report dashboard <br>
 
-### **Dataset**
+### **Dataset** 
 The dataset provided consists of the following tables:
 - Penjualan
 - Pelanggan
 - Barang
 <br>
+
 <details>
   <summary>Click to see ‘Penjualan Table’</summary>
 
@@ -31,6 +31,7 @@ The dataset provided consists of the following tables:
 
 </details>
 <br>
+
 <details>
   <summary> Click to see ‘Pelanggan Table’</summary>
 
@@ -40,6 +41,7 @@ The dataset provided consists of the following tables:
 
 </details>
 <br>
+
 <details>
   <summary> Click to see ‘Barang Table’ </summary>
 
@@ -49,6 +51,7 @@ The dataset provided consists of the following tables:
 
 </details>
 <br>
+
 <details>
   <summary> Click to see Entity Relational Diagram</summary>
 
@@ -58,7 +61,9 @@ The dataset provided consists of the following tables:
 
 </details>
 <br>
+
 ---
+
 ## 📂 **Design Datamart**
 ### **Base Table**
 The base table is a table that contains raw data collected from various sources. The base table in this project is a combination of several columns from the three tables above with the primary key, namely`invoice_id`. <br>
@@ -93,8 +98,10 @@ FROM penjualan s
 	LEFT JOIN barang b ON b.kode_barang = s.id_barang
 ORDER BY s.tanggal
 );
+
 ALTER TABLE base_table ADD PRIMARY KEY(id_invoice);  
-```  
+
+  
 <br>
 </details>
 <br>
@@ -104,6 +111,8 @@ ALTER TABLE base_table ADD PRIMARY KEY(id_invoice);
     Figure 1 — Sample of The Output Base Table 
 </p>
 <br>
+
+
 ### Aggregate Table
 After creating the base table, I created an aggregate table that SUM the `price` and `product_sold` columns. Then create a new column to find the `total_revenue` value. An aggregate table is a table created to collect and calculate data from a base table. This table contains more concise data so that the process of analyzing and visualizing data is faster and easier.
 <details>
@@ -133,7 +142,8 @@ group by
 	lini,
 	(jumlah_barang * harga) 
 );
-```   
+```
+    
 <br>
 </details>
 <br>
@@ -143,6 +153,7 @@ group by
     Figure 2 — Sample of The Output Base Table
 </p>
 <br>
+
 ---
 
 ## 📂 **Data Visualization**
