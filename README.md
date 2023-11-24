@@ -16,13 +16,12 @@ The source is from Rakamin, there is Kimia Farma data which provides a CSV file 
 - Create data mart designs in the form of base tables and aggregate tables
 - Create a sales report dashboard <br>
 
-### **Dataset** <br>
+### **Dataset**
 The dataset provided consists of the following tables:
 - Penjualan
 - Pelanggan
 - Barang
 <br>
-
 <details>
   <summary>Click to see ‘Penjualan Table’</summary>
 
@@ -32,7 +31,6 @@ The dataset provided consists of the following tables:
 
 </details>
 <br>
-
 <details>
   <summary> Click to see ‘Pelanggan Table’</summary>
 
@@ -42,7 +40,6 @@ The dataset provided consists of the following tables:
 
 </details>
 <br>
-
 <details>
   <summary> Click to see ‘Barang Table’ </summary>
 
@@ -52,7 +49,6 @@ The dataset provided consists of the following tables:
 
 </details>
 <br>
-
 <details>
   <summary> Click to see Entity Relational Diagram</summary>
 
@@ -62,7 +58,6 @@ The dataset provided consists of the following tables:
 
 </details>
 <br>
-
 ---
 ## 📂 **Design Datamart**
 ### **Base Table**
@@ -109,7 +104,7 @@ ALTER TABLE base_table ADD PRIMARY KEY(id_invoice);
     Figure 1 — Sample of The Output Base Table 
 </p>
 <br>
-### Tabel Aggregat
+### Aggregate Table
 After creating the base table, I created an aggregate table that SUM the `price` and `product_sold` columns. Then create a new column to find the `total_revenue` value. An aggregate table is a table created to collect and calculate data from a base table. This table contains more concise data so that the process of analyzing and visualizing data is faster and easier.
 <details>
   <summary> Klik untuk melihat Query </summary>
@@ -148,7 +143,6 @@ group by
     Figure 2 — Sample of The Output Base Table
 </p>
 <br>
-
 ---
 
 ## 📂 **Data Visualization**
